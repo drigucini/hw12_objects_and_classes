@@ -19,13 +19,11 @@ public class Main {
 
     public static void task1() {
         System.out.println("\nTask 1");
-        Book warAndPeace = new Book ("War and Peace", "Leo Tolstoy", 1969 );
+        Author leoTolstoy = new Author("Leo", "Tolstoy");
+        Author fyodorDostoevsky = new Author("Fyodor", "Dostoyevsky");
+        Book warAndPeace = new Book ("War and Peace", leoTolstoy ,  1969 );
         warAndPeace.setYearPublicated(1869);
-        System.out.println("Book 1: " + warAndPeace.getName() + ", published in " + warAndPeace.getyearPublicated() + " by " + warAndPeace.getAuthor());
-        Book crimeAndPunishment = new Book ("Crime and Punishment", "Fyodor Dostoevsky", 1866 );
-
-        Author agathaChristie = new Author("Agatha", "Christie");
-        Author arthurConanDoyle = new Author("Arthur", "Conan Doyle");
-
+        System.out.println("Book 1: " + warAndPeace.getName() + ", published in " + warAndPeace.getyearPublicated() + " by " + warAndPeace.getAuthorName());
+        Book crimeAndPunishment = new Book ("Crime and Punishment", fyodorDostoevsky, 1866 );
     }
 }
