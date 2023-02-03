@@ -15,7 +15,14 @@ public class Person {
         return this.age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void increaseAge(int increment) {
+        if (increment < 0) {
+            throw new IllegalArgumentException("Age cannot be negative");
+        }
+        this.age = age + increment;
+    }
+
+    public String toString() {
+        return "Name " + this.name + " Age " + this.age;
     }
 }
