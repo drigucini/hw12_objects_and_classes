@@ -28,8 +28,14 @@ public class Main {
         System.out.println("Book 1: " + warAndPeace.getName() + ", published in " + warAndPeace.getyearPublicated() + " by " + warAndPeace.getAuthorName());
         Book crimeAndPunishment = new Book ("Crime and Punishment", fyodorDostoevsky, 1866 );
         System.out.println(crimeAndPunishment);
-        Book a = new Book("abc", leoTolstoy, 1000);
-        Book b = new Book("ab", leoTolstoy, 1000);
+        Book a = new Book("We", leoTolstoy, 1000);
+        Book b = new Book("We", leoTolstoy, 1000);
         System.out.println(b.equals(a));
+
+        Author faulkner = new Author("William", "Faulkner");
+        Author gibson = new Author("William", "Gibson");
+        Author twain = new Author("Mark", "Twain");
+        System.out.println(faulkner.equals(gibson));
+        System.out.println(gibson.equals(twain));
     }
 }
