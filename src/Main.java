@@ -10,11 +10,13 @@ public class Main {
         Person Sarah = new Person("Sarah", 30);
         System.out.println("Sarah.name = " + Sarah.getName());
         System.out.println("Sarah.age = " + Sarah.getAge());
-        Sarah.setAge(31);
+        Sarah.increaseAge(1);
         System.out.println("Sarah.getAge() = " + Sarah.getAge());
         Person john = new Person("John", 23);
         System.out.println("John.name = " + john.getName());
         System.out.println("John.age = " + john.getAge());
+        System.out.println(Sarah);
+        // ctrl alt t = surround line with an operator
     }
 
     public static void task1() {
@@ -25,5 +27,15 @@ public class Main {
         warAndPeace.setYearPublicated(1869);
         System.out.println("Book 1: " + warAndPeace.getName() + ", published in " + warAndPeace.getyearPublicated() + " by " + warAndPeace.getAuthorName());
         Book crimeAndPunishment = new Book ("Crime and Punishment", fyodorDostoevsky, 1866 );
+        System.out.println(crimeAndPunishment);
+        Book a = new Book("We", leoTolstoy, 1000);
+        Book b = new Book("We", leoTolstoy, 1000);
+        System.out.println(b.equals(a));
+
+        Author faulkner = new Author("William", "Faulkner");
+        Author gibson = new Author("William", "Gibson");
+        Author twain = new Author("Mark", "Twain");
+        System.out.println(faulkner.equals(gibson));
+        System.out.println(gibson.equals(twain));
     }
 }
