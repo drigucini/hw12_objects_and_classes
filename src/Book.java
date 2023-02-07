@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
     private String name;
     private int yearPublicated;
@@ -31,17 +33,15 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Book a2 = (Book) other;
-        return name.equals(a2.name);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearPublicated == book.yearPublicated && name.equals(book.name) && authorName.equals(book.authorName);
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(name, yearPublicated);
+        return Objects.hash(name, yearPublicated, authorName);
     }
-
 }
